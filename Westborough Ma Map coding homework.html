@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Maps Application!</title>
+    <style type="text/css">
+        #map
+        {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h1>Westborough's (MA) Map!</h1>
+<div id = "map"></div>
+<script type="text/javascript">
+
+
+    function initMap()
+    {
+        var westborough = {lat: 42.2695 , lng: -71.6161};
+
+        var map = new google.maps.Map(document.getElementById('map'), {zoom: 14 , center: westborough  }) ; 
+
+       var highschool = {lat:42.264816 , lng: -71.61840000000001} 
+   
+       var marker =  new google.maps.Marker({position: highschool , map: map}) ; 
+
+       var pizza = { lat:42.2696993, lng:-71.6136103}
+
+       var marker = new google.maps.Marker({position: pizza, map: map}) ; 
+
+       var myhouse = { lat: 42.2521422, lng:-71.59290299999998}
+
+       var marker = new  google.maps.Marker({position:myhouse, map: map}) ; 
+
+       var school = {lat:42.255908 , lng: -71.64946320000001} 
+
+       var marker = new google.maps.Marker({position: school, map: map}) ;
+
+
+    }
+</script>
+
+       
+    
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyJbEeGdT-mmw5_gXG6wcb2lmYj8wRZUE&callback=initMap"> </script>
+</body>
+</html>
